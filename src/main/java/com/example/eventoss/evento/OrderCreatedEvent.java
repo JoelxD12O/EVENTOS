@@ -3,6 +3,8 @@ package com.example.eventoss.evento;
 import com.example.eventoss.model.Order;
 import org.springframework.context.ApplicationEvent;
 
+import java.util.List;
+
 public class OrderCreatedEvent extends ApplicationEvent {
 
     private final Order order;
@@ -18,8 +20,6 @@ public class OrderCreatedEvent extends ApplicationEvent {
         return order;
     }
 
-    // Agregar métodos para acceder a propiedades de la orden
-
     // Método para obtener el ID de la orden
     public Long getOrderId() {
         return order.getId();  // Asumiendo que Order tiene un campo id
@@ -30,8 +30,8 @@ public class OrderCreatedEvent extends ApplicationEvent {
         return order.getEmail();  // Asumiendo que Order tiene un campo email
     }
 
-    // Método para obtener el producto (asumiendo que Order tiene un campo product)
-    public String getProduct() {
-        return order.getProduct();  // Asumiendo que Order tiene un campo product
+    // Método para obtener los productos de la orden
+    public List<String> getProducts() {
+        return order.getProductos();  // Asumiendo que Order tiene un campo productos
     }
 }
