@@ -1,5 +1,6 @@
 package com.example.eventoss.listener;
 
+import com.example.eventoss.evento.OrderCreatedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.Async;
 import org.slf4j.Logger;
