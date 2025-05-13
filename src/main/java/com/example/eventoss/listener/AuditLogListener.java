@@ -1,4 +1,4 @@
-package com.example.eventoss;
+package com.example.eventoss.listener;
 
 import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.Async;
