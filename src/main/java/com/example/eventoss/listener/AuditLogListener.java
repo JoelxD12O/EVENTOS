@@ -19,6 +19,6 @@ public class AuditLogListener {
     public void handleOrderCreatedEvent(OrderCreatedEvent event) {
         // Registra el evento en los logs. Simulamos el registro del pedido.
         logger.info("Pedido registrado en los logs. ID: {}, Email: {}, Producto: {}",
-                event.getOrderId(), event.getEmail(), event.getProduct());
+                event.getOrderId(), event.getEmail(), event.getProducts());
     }
 }
