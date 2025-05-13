@@ -26,8 +26,9 @@ public class InventoryUpdateListener {
 
     @EventListener
     public void handleOrderCreated(OrderCreatedEvent event) {
-        for (Producto producto : event.getProductos()) {
-            reducirStock(producto.getId(), producto.getCantidad());
+        for (String productoId : event.getProducts()) {
+            Long id = Long.parseLong(productoId); // Convertir el ID a Long
+            reducirStock(id, 1); // Asumimos que la cantidad es 1 si no está especificada
         }
         log.info("Stock actualizado por OrderCreatedEvent");
     }
